@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0a1a3a, #3b82f6);
+}
+
+/* 🌌 Pages */
+.page {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.page.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ✨ Titles */
+.title {
+    font-size: 3.5rem;
+    text-shadow: 0 0 20px #fff;
+}
+
+.name {
+    font-size: 4rem;
+    color: #e9d5ff;
+    text-shadow: 0 0 25px #f472b6;
+}
+
+/* 🔘 Button */
+button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #a855f7, #ec4899);
+    color: white;
+    box-shadow: 0 0 20px #ec4899;
+}
+
+/* 💌 Message Page */
+.message-page {
+    background: linear-gradient(135deg, #6b21a8, #ec4899);
+}
+
+.message-box {
+    background: rgba(255,255,255,0.85);
+    padding: 30px;
+    border-radius: 20px;
+    width: 85%;
+    max-width: 600px;
+}
+
+.message-box p {
+    font-size: 1.4rem;
+    color: #000;
+    line-height: 1.8;
+    font-weight: bold;
+}
+
+/* ⭐ Stars Animation */
+.stars::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow:
+        100px 300px white,
+        200px 600px white,
+        400px 200px white,
+        600px 500px white,
+        800px 100px white,
+        1000px 400px white;
+    animation: starsMove 6s linear infinite;
+}
+
+@keyframes starsMove {
+    from {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
